@@ -1,0 +1,86 @@
+1.
+fun main() {
+
+    fun removeOne(item: Int, list: List<Int>): List<Int> {
+
+        var list_removed = list.minusElement(item)
+        return list_removed
+    }
+
+    var numbers = listOf(1, 2, 3, 4, 5, 6, 1)
+
+    var numbers1 = removeOne(5, numbers)
+
+    println(numbers1)
+}
+
+2.
+fun main(){
+
+    fun remove(item: Int, list: List<Int>): List<Int>{
+
+        var list_removed = list.filter { it !=item }
+        return list_removed
+
+    }
+
+    var numbers = listOf(1, 2, 3, 4, 5, 6, 1)
+
+    var numbers1 = remove(1, numbers)
+
+    println(numbers1)
+
+}
+
+3.
+fun main(){
+
+    fun reverse(array: Array<Int>): Array<Int>{
+
+        val arrayReversed = Array<Int>(array.size){0}
+
+        array.forEach {
+            arrayReversed[array.size-(array.indexOf(it)+1)] = it
+        }
+
+        return arrayReversed
+    }
+
+    var numbers = arrayOf<Int>(5,6,54,4,8,2,15,987)
+
+    var numbers1 = reverse(numbers)
+
+    for (element in numbers1) {
+        println(element)}
+
+}
+
+4.
+fun main(){
+
+    fun minMax(numbers: Array<Int>): Pair<Int, Int>{
+
+        var minimum = numbers[0]
+        var maximum = numbers[0]
+
+        numbers.forEach {
+            if(it <= minimum) {
+                minimum = it
+            }
+        }
+        numbers.forEach {
+            if(it >= maximum) {
+                maximum = it
+            }
+        }
+
+        return Pair(minimum,maximum)
+    }
+
+    var numbers = arrayOf<Int>(5,6,54,4,8,2,15,987)
+    var para = minMax(numbers)
+
+    println(para.component1())
+    println(para.component2())
+
+}

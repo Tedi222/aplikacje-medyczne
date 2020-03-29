@@ -1,0 +1,26 @@
+1.
+suma = 55
+liczba iteracji = 11
+
+2. x = 0, y = 4
+Przedział domknięty <x,y>=0,1,2,3,4 uwzglednia y (0..4)
+Przedział <x,y)= 0,1,2,3 bez y (0 until 4)
+
+
+3.
+Przedział zamknięty nie może być nigdy pusty
+poniewaz ma zawsze poczatkowa i koncową wartość np. 0..0
+
+4. Wyrażenie 'when' to instrukcja, dzięki której można wykonać pewne fragmenty kodu.
+Jest to bardziej zaawansowany odpowiednik wyrażenia "switch" z C/C++. Ponadto wyrażenie
+'when' może zwracać wartość.
+
+5.
+fun main()
+{
+    var count=10
+    while(count >= 0) {
+        println(count)
+        count--
+    }
+}

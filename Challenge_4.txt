@@ -1,0 +1,35 @@
+1. Nullable type to typ zmiennej, który nie musi przechowywać zadnej wartości. Może mieć wart. null
+var value: Int? = 7
+value może przechowywać wartość typu Int lub null.
+
+Null Safety to mechanizm zabezpieczający przed negatywnymi, niezidentyfikowanymi skutkami sytuacji, w której
+wykorzystujemy daną zmienną, która okazuje się mieć wartość null. Elementami null safety są NullPointerException, czyli wyjątek
+zwracany w przypadku wykrycia zmiennej nie posiadającej wartości, smart casts, safe calls i elvis operator.
+
+2. Elvis operator pobiera i zwraca wartość zmiennej, jeśli ta wartość istnieje, a jesli nie istnieje (null) zwraca wartość domyślną.
+
+3. Operator !! powoduje zwrócenie wyjątku NullPointerException w przypadku, gdy zmienna ma wartość null, a operator ?. nie.
+
+4. 
+var name: String? = "Bożena"	- valid
+var age: Int = null		- invalid
+val distance: Float = 26.7	- invalid
+var middleName: String? = null	- valid
+
+5.  
+fun divideIfWhole(a:Int, b:Int): Int?{
+       if(a % b == 0){
+           return a / b
+       }else {
+           return null
+       }
+}
+	var number1 = 16
+	var number2 = 5
+	var answer : Int? = divideIfWhole(number1,number2)
+    
+ 	if(answer == null){
+        	println("Not divisible :[")
+	} else{
+        	println("Yep, it divides $answer times")
+	}

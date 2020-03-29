@@ -1,0 +1,40 @@
+1. Jak działa funkcja lambda?
+-jest to funkcja bez nazwy/anonimowa
+-należy ją przypisać zmiennej i można operować nią jak na zmiennej
+-zwraca ona zawsze ostatnie wyrażenie w ciele funkcji
+-nie pozwala na użycie nazw argumentów
+
+2. Jak działa operator it?
+-jeżeli funkcja lambda ma tylko jeden argument to w ciele funkcji nawiązujemy do niego jako "it"
+
+3. 
+fun main() {
+    fun repeatTask(times: Int, task: () -> Unit) {
+        repeat(times){
+            task()
+        }
+        var unitLambda: () -> Unit = {
+            println("Bruh")
+        }
+
+    }
+
+}
+
+4. 
+fun main() {
+    val appRatings = mapOf(
+        "Kalendarz Pro" to arrayOf(1, 5, 5, 4, 2, 1, 5, 4),
+        "Kurier Messenger" to arrayOf(5, 4, 2, 5, 4, 1, 1, 2),
+        "Myszojeleniopedia" to arrayOf(2, 1, 2, 2, 1, 2, 4, 2)
+    )
+    val averageRatings = mutableMapOf<String, Float>()
+    appRatings.forEach{
+        val average: Float = it.value.reduce{ average, element -> (average + element) }.toFloat()/it.value.size
+        averageRatings.put(it.key,average)
+    }
+    println(averageRatings)
+
+    val greaterThan3 = averageRatings.filter { it.value > 3 }
+    println(greaterThan3)
+}

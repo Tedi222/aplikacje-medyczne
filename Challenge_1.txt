@@ -1,0 +1,54 @@
+Challenge 1
+1. 
+Należy utworzyć funkcję w której będzie zawierał się dany kod
+Nie jest zainicjalizowana wartość val lastName: String 
+Wartość fullName ma być typem string dlatego umieszczamy val fullName = "$firstName $lastName"
+
+fun main() {
+    val lastName =""
+    val firstName = "Joe"
+    if (firstName == "George") {
+        val lastName = "Lucas"
+    } else if (firstName == "Andrzej") {
+        val lastName = "Wajda"
+    }
+    val fullName = "$firstName $lastName"
+    println("$fullName")
+}
+
+
+
+2.
+true
+false
+true
+true
+false
+
+3.
+fun main() {
+    var number : Float = 7.0F
+
+    if (log2(number) % 1.0 == 0.0) {
+        println("is a power of 2")
+    } else {
+        println("is not a power of 2")
+    }
+}
+
+4.
+fun main() {
+    var number : Int = 10
+    var sum : Double = 0.0
+
+    for(dice1 in 1..6) {
+        for (dice2 in 1..6) {
+            if (dice1 + dice2 == number) {
+                sum = sum + 1.0
+            }
+        }
+    }
+    var odds = sum/36.0
+    println("Odds = $odds")
+}
+
